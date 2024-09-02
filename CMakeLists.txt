@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.6)
+project(beton)
+add_compile_options(-Wall -Wextra -Werror)
+add_link_options()
+add_executable(beton src/beton.c)
+install(TARGETS beton DESTINATION /usr/bin)
