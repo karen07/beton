@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main()
+int main(void)
 {
     FILE *CB_file = fopen("cb.txt", "r");
     int CB_count = 0;
