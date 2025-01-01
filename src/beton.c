@@ -4,24 +4,40 @@
 int main(void)
 {
     FILE *CB_file = fopen("cb.txt", "r");
+    if (CB_file == NULL) {
+        printf("cb.txt open error\n");
+        return 0;
+    }
     int CB_count = 0;
     double *CB_values = (double *)malloc(sizeof(double) * 1000);
     while (fscanf(CB_file, "%lf\n", &CB_values[CB_count++]) != EOF) {
     }
 
     FILE *price_file = fopen("price.txt", "r");
+    if (price_file == NULL) {
+        printf("price.txt open error\n");
+        return 0;
+    }
     int price_count = 0;
     double *price_values = (double *)malloc(sizeof(double) * 1000);
     while (fscanf(price_file, "%lf\n", &price_values[price_count++]) != EOF) {
     }
 
     FILE *inf_file = fopen("inf.txt", "r");
+    if (inf_file == NULL) {
+        printf("inf.txt open error\n");
+        return 0;
+    }
     int inf_count = 0;
     double *inf_values = (double *)malloc(sizeof(double) * 1000);
     while (fscanf(inf_file, "%lf\n", &inf_values[inf_count++]) != EOF) {
     }
 
     FILE *salary_file = fopen("salary.txt", "r");
+    if (salary_file == NULL) {
+        printf("salary.txt open error\n");
+        return 0;
+    }
     int salary_count = 0;
     double *salary_values = (double *)malloc(sizeof(double) * 1000);
     while (fscanf(salary_file, "%lf\n", &salary_values[salary_count++]) != EOF) {
